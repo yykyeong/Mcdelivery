@@ -1,0 +1,179 @@
+
+// 주문정보영역
+.order-info-area {
+  padding: 10px $m-padding 20px;
+  border-bottom: 1px solid rgba(0,0,0,.4);
+  background-color: $bg03;
+
+
+  // 타이틀
+  .info-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 18px;
+    font-weight: 700;
+
+    .store {
+      width: 50px;
+      margin-left: auto;
+    }
+  }
+
+  // 주문분류
+  .order-tablist {
+    margin-top: 12px;
+    display: flex;
+
+    .tab-switch {
+      flex-grow: 1;
+      background-color: rgba(0,0,0,.06);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 40px;
+      text-align: center;
+      color: #666;
+
+      &.is-active {
+        position: relative;
+        flex-grow: 1.2;
+        border: 1px solid $red;
+        font-size: 15px;
+        color: $black;
+        background-color: $white;
+        box-shadow: 0 2px 3px 0 rgba(0,0,0,.05);
+        img {
+          height: 18px;
+        }
+        .ico-check {
+          display: inline-block;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: -9.5px;
+          width: 10px;
+          height: 10px;
+          border: 1px solid $red;
+          border-width: 0 1px 1px 0;
+          background-color: $white;
+          transform: rotate(45deg) translateX(-50%);
+        }
+      }
+
+      img {
+        height: 15px;
+        vertical-align: middle;
+        margin-right: 6px ;
+      }
+      .ico-check {
+        margin-right: 0;
+        margin-left: 4px;
+        display: none;
+        width: 14px;
+      }
+    }
+  }
+
+  .order-notice {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background-color: $white;
+    font-size: 14px;
+
+    &.alert {
+      color: $red;
+    }
+  }
+
+
+}
+
+// 맥런치영역
+.mclunch-area {
+  margin-top: 16px;
+  padding: 18px 0;
+  background-color: $white;
+
+  .mclunch-desc {
+    font-size: 14px;
+    white-space: nowrap;
+    margin-bottom: 16px;
+    padding-left: 16px
+  }
+
+  .mclunch-group {
+    display: flex;
+
+    .mclunch-title {
+      display: flex;
+      flex-shrink: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      border-right: 1px solid $border01;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.5;
+      .ico-clock {
+        width: 14px;
+        margin-bottom: 4px;
+      }
+    }
+
+    .mclunch-menu-list {
+      display: flex;
+    }
+    .mclunch-menu-item {
+      box-sizing: content-box;
+      width: 80px;
+      text-align: center;
+      position: relative;
+      padding-right: 16px;
+      &:first-child {
+        padding-left: 16px;
+      }
+
+      .menu-img {
+        display: flex;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        background-color: $bg01;
+        border-radius: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+
+      .menu-name {
+        margin-top: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        @include ellipsis;
+      }
+
+      .menu-price {
+        font-size: 13px;
+        font-weight: 700;
+        color: $green;
+      }
+
+      .badge-cart {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        display: flex;
+        padding: 6px;
+        border: 1px solid $border02;
+        border-radius: 100%;
+        background-color: $white;
+      }
+    }
+
+
+  }
+}

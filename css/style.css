@@ -46,6 +46,10 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.hidden {
+  display: none;
+}
+
 .header-area {
   background-color: white;
 }
@@ -100,4 +104,172 @@ button:disabled {
 .common-inner {
   margin: 0 auto;
   max-width: 720px;
+}
+
+.scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
+.order-info-area {
+  padding: 10px 18px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: #FFF2D1;
+}
+.order-info-area .info-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.order-info-area .info-title .store {
+  width: 50px;
+  margin-left: auto;
+}
+.order-info-area .order-tablist {
+  margin-top: 12px;
+  display: flex;
+}
+.order-info-area .order-tablist .tab-switch {
+  flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.06);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  color: #666;
+}
+.order-info-area .order-tablist .tab-switch.is-active {
+  position: relative;
+  flex-grow: 1.2;
+  border: 1px solid #D90007;
+  font-size: 15px;
+  color: #292929;
+  background-color: #fff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+}
+.order-info-area .order-tablist .tab-switch.is-active img {
+  height: 18px;
+}
+.order-info-area .order-tablist .tab-switch.is-active .ico-check {
+  display: inline-block;
+}
+.order-info-area .order-tablist .tab-switch.is-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9.5px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #D90007;
+  border-width: 0 1px 1px 0;
+  background-color: #fff;
+  transform: rotate(45deg) translateX(-50%);
+}
+.order-info-area .order-tablist .tab-switch img {
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.order-info-area .order-tablist .tab-switch .ico-check {
+  margin-right: 0;
+  margin-left: 4px;
+  display: none;
+  width: 14px;
+}
+.order-info-area .order-notice {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background-color: #fff;
+  font-size: 14px;
+}
+.order-info-area .order-notice.alert {
+  color: #D90007;
+}
+
+.mclunch-area {
+  margin-top: 16px;
+  padding: 18px 0;
+  background-color: #fff;
+}
+.mclunch-area .mclunch-desc {
+  font-size: 14px;
+  white-space: nowrap;
+  margin-bottom: 16px;
+  padding-left: 16px;
+}
+.mclunch-area .mclunch-group {
+  display: flex;
+}
+.mclunch-area .mclunch-group .mclunch-title {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-right: 1px solid #f2f2f2;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.mclunch-area .mclunch-group .mclunch-title .ico-clock {
+  width: 14px;
+  margin-bottom: 4px;
+}
+.mclunch-area .mclunch-group .mclunch-menu-list {
+  display: flex;
+}
+.mclunch-area .mclunch-group .mclunch-menu-item {
+  box-sizing: content-box;
+  width: 80px;
+  text-align: center;
+  position: relative;
+  padding-right: 16px;
+}
+.mclunch-area .mclunch-group .mclunch-menu-item:first-child {
+  padding-left: 16px;
+}
+.mclunch-area .mclunch-group .mclunch-menu-item .menu-img {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: #f5f5f5;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.mclunch-area .mclunch-group .mclunch-menu-item .menu-img img {
+  width: 100%;
+}
+.mclunch-area .mclunch-group .mclunch-menu-item .menu-name {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.mclunch-area .mclunch-group .mclunch-menu-item .menu-price {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4B8612;
+}
+.mclunch-area .mclunch-group .mclunch-menu-item .badge-cart {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  display: flex;
+  padding: 6px;
+  border: 1px solid #e5e5e5;
+  border-radius: 100%;
+  background-color: #fff;
 }
