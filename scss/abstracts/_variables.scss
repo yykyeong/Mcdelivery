@@ -19,3 +19,6 @@ $font-default : Pretendard,sans-serif;
 $m-padding: 18px;
 $header-title-height: 48px;
 $header-tablist-height: 46px;
+
+$header-height: $header-title-height+$header-tablist-height;
+$order-box-area-height: 70px ;

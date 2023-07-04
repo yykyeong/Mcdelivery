@@ -1,9 +1,11 @@
 
+
 // 주문정보영역
 .order-info-area {
   padding: 10px $m-padding 20px;
-  border-bottom: 1px solid rgba(0,0,0,.4);
+  border-bottom: 1px solid rgba(0,0,0,.04);
   background-color: $bg03;
+
 
 
   // 타이틀
@@ -176,4 +178,159 @@
 
 
   }
+}
+
+// 메뉴카테고리영역
+.menu-category-area {
+  background-color: $white;
+  position: sticky;
+  top: $header-height;
+  background-color: white;
+  z-index: 999;
+  .common-inner {
+    position: relative;
+    border-bottom: 1px solid $border02;
+  }
+
+  .category-list {
+    display: flex;
+    align-items: center;
+    height: 54px;
+  }
+
+  .category-item {
+    &:first-child {
+      padding-left: $m-padding;
+    }
+    &:last-child {
+      padding-right: $m-padding;
+    }
+  }
+
+  .category-tab {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 12px;
+    font-size: 16px;
+    &.is-active {
+      background-color: $black;
+      font-weight: 700;
+      color: $white;
+      border-radius: 15px;
+    }
+  }
+}
+
+// 메뉴리스트영역
+.menu-list-area {
+
+  .menu-list-group {
+    padding: 28px $m-padding 10px;
+    background-color: $white;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &.is-closed {
+      padding: 24px $m-padding;
+      
+      & + .is-closed {
+        margin-top: 0;
+        border-top: 1px solid $border02;
+      }
+
+      .ico-arrow {
+        transform: rotate(180deg);
+      }
+
+      .menu-list {
+        display: none;
+      }
+    }
+  }
+  .menu-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .btn-toggle {
+    display: flex;
+    margin: -16px;
+    padding: 16px;
+  }
+
+}
+
+// 담은메뉴영역
+.order-box-area {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid $border02;
+  box-shadow: 0 0 6px 4px rgba(0,0,0,.03);
+  background-color: $white;
+
+  .common-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px $m-padding;
+  }
+  
+  .order-txt {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+  .order-price {
+    font-size: 19px;
+    font-weight: 700;
+    color: $green;
+  }
+
+  .btn-order {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    width: 128px;
+    height: 46px;
+    border-radius: 5px;
+    background-color: $red;
+    font-weight: 700;
+    color: $white;
+  }
+
+  .icon {
+    position: relative;
+
+    .ico-cart {
+      width: 20px;
+      height: 20px;
+    }
+
+    .num {
+      position: absolute;
+      top: -5px;
+      right: -4px;
+      width: 16px;
+      line-height: 16px;
+      background-color: $white;
+      border: 1px solid;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+      color: $red;
+
+    }
+  }
+
+
 }

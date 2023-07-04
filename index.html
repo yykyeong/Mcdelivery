@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,129 +8,307 @@
   <link rel="stylesheet" href="./css/style.css">
   <script defer src="./js/custom.js"></script>
 </head>
+
 <body>
-    <div class="container">
+  <div class="container">
 
-      <!-- 고정헤더영역 -->
-      <header class="header-area">
-        <div class="header-title">
-            <a href="#none" class="link-back">
-              <img src="./images/ico-back.svg" alt="뒤로가기">
-            </a>
-            <img src="./images/logo_mcdelivery.jpg" alt="로고">
-            <a href="#none" class="my-orders">
-              <img src="./images/ico-cart.svg" alt="주문내역으로 가기" >
-            </a>
+    <!-- 고정헤더영역 -->
+    <header class="header-area">
+      <div class="header-title">
+        <a href="#none" class="link-back">
+          <img src="./images/ico-back.svg" alt="뒤로가기">
+        </a>
+        <img src="./images/logo_mcdelivery.jpg" alt="로고">
+        <a href="#none" class="my-orders">
+          <img src="./images/ico-cart.svg" alt="주문내역으로 가기">
+        </a>
+      </div>
+      <ul class="header-tablist">
+        <li><a href="#none" class="tab">홈</a></li>
+        <li class="is-active"><a href="#none" class="tab">메뉴</a></li>
+        <li><a href="#none" class="tab">주문조회</a></li>
+        <li><a href="#none" class="tab">기타정보</a></li>
+      </ul>
+    </header>
+
+    <!-- 주문정보영역 -->
+    <section class="order-info-area">
+      <div class="common-inner">
+
+        <!-- 주문타이틀 -->
+        <div class="info-title">
+          <img src="./images/ico-logo-black.png" alt="logo">주문
+          <img src="./images/ico-store.png" alt="store" class="store">
         </div>
-        <ul class="header-tablist">
-          <li><a href="#none" class="tab">홈</a></li>
-          <li class="is-active"><a href="#none" class="tab">메뉴</a></li>
-          <li><a href="#none" class="tab">주문조회</a></li>
-          <li><a href="#none" class="tab">기타정보</a></li>
-        </ul>
-      </header>
 
-      <!-- 주문정보영역 -->
-      <section class="order-info-area">
-        <div class="common-inner">
+        <!-- 주문분류 -->
+        <div class="order-tablist">
+          <a href="#none" class="tab-switch is-active">
+            <img src="./images/ico-pickup.png" alt="pickup">포장
+            <img src="./images/ico-check.svg" alt="ico-check" class="ico-check">
+          </a>
+          <a href="#none" class="tab-switch">
+            <img src="./images/ico-bicycle.png" alt="pickup">배달
+            <img src="./images/ico-check.svg" alt="ico-check" class="ico-check">
+          </a>
+        </div>
 
-          <!-- 주문타이틀 -->
-          <div class="info-title">
-            <img src="./images/ico-logo-black.png" alt="logo">주문
-            <img src="./images/ico-store.png" alt="store" class="store">
-          </div>
-          
-          <!-- 주문분류 -->
-          <div class="order-tablist">
-            <a href="#none" class="tab-switch is-active">
-              <img src="./images/ico-pickup.png" alt="pickup">포장
-              <img src="./images/ico-check.svg" alt="ico-check" class="ico-check">
-            </a>
-            <a href="#none" class="tab-switch" >
-              <img src="./images/ico-bicycle.png" alt="pickup">배달
-              <img src="./images/ico-check.svg" alt="ico-check" class="ico-check">
-            </a>
-          </div>
+        <div class="order-notice pickup">
+          픽업하실 수 있게 준비됩니다.
+        </div>
 
-          <div class="order-notice pickup">
-            픽업하실 수 있게 준비됩니다.
-          </div>
+        <div class="order-notice alert hidden">
+          지금은 주문을 받을 수 없습니다.
+        </div>
 
-          <div class="order-notice alert hidden">
-            지금은 주문을 받을 수 없습니다.
-          </div>
-          
-          <!-- 맥런치리스트 -->
-          <div class="mclunch-area">
-            <p class="mclunch-desc">
-              오전 10시 30분부터 오후 2시까지<br>
-              점심 특별 할인으로 맥런치 세트를 즐겨보세요!
-            </p>
-            <div class="mclunch-group">
-              <div class="mclunch-title">
-                <img src="./images/ico-clock.svg" alt="ico-clock" class="ico-clock">맥런치
-              </div>
-              <div class="mclunch-menu-area scroll-x">
-                <ul class="mclunch-menu-list">
-                  <li class="mclunch-menu-item">
-                    <a href="#none">
-                      <div class="menu-img"><img src="./images/mclunch-QuarterPounder.png" alt="" ></div>
-                      <p class="menu-name">쿼터파운더치즈</p>
-                      <p class="menu-price">6,500원</p>
-                    </a>
-                    <a href="#none" class="badge-cart">
-                      <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
-                    </a>
-                  </li>
-                  <li class="mclunch-menu-item">
-                    <a href="#none">
-                      <div class="menu-img"><img src="./images/mclunch-Shanghai.png" alt="" ></div>
-                      <p class="menu-name">맥스파이시 상하이 버거 세트</p>
-                      <p class="menu-price">6,500원</p>
-                    </a>
-                    <a href="#none" class="badge-cart">
-                      <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
-                    </a>
-                  </li>
-                  <li class="mclunch-menu-item">
-                    <a href="#none">
-                      <div class="menu-img"><img src="./images/mclunch-btd.png" alt="" ></div>
-                      <p class="menu-name">베이컨 토마토 디럭스 세트</p>
-                      <p class="menu-price">7,400원</p>
-                    </a>
-                    <a href="#none" class="badge-cart">
-                      <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
-                    </a>
-                  </li>
-                  <li class="mclunch-menu-item">
-                    <a href="#none">
-                      <div class="menu-img"><img src="./images/mclunch-1955.png" alt="" ></div>
-                      <p class="menu-name">1955 버거 세트</p>
-                      <p class="menu-price">7,200원</p>
-                    </a>
-                    <a href="#none" class="badge-cart">
-                      <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
-                    </a>
-                  </li>
-                  <li class="mclunch-menu-item">
-                    <a href="#none">
-                      <div class="menu-img"><img src="./images/mclunch-BigMac.png" alt="" ></div>
-                      <p class="menu-name">빅맥 세트</p>
-                      <p class="menu-price">6,500원</p>
-                    </a>
-                    <a href="#none" class="badge-cart">
-                      <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
-                    </a>
-                  </li>
-                </ul>
-              </div>
+        <!-- 맥런치리스트 -->
+        <div class="mclunch-area">
+          <p class="mclunch-desc">
+            오전 10시 30분부터 오후 2시까지<br>
+            점심 특별 할인으로 맥런치 세트를 즐겨보세요!
+          </p>
+          <div class="mclunch-group">
+            <div class="mclunch-title">
+              <img src="./images/ico-clock.svg" alt="ico-clock" class="ico-clock">맥런치
             </div>
-
+            <ul class="mclunch-menu-list scroll-x">
+              <li class="mclunch-menu-item">
+                <a href="#none">
+                  <div class="menu-img"><img src="./images/mclunch-QuarterPounder.png" alt=""></div>
+                  <p class="menu-name">쿼터파운더치즈</p>
+                  <p class="menu-price">6,500원</p>
+                </a>
+                <a href="#none" class="badge-cart">
+                  <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
+                </a>
+              </li>
+              <li class="mclunch-menu-item">
+                <a href="#none">
+                  <div class="menu-img"><img src="./images/mclunch-Shanghai.png" alt=""></div>
+                  <p class="menu-name">맥스파이시 상하이 버거 세트</p>
+                  <p class="menu-price">6,500원</p>
+                </a>
+                <a href="#none" class="badge-cart">
+                  <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
+                </a>
+              </li>
+              <li class="mclunch-menu-item">
+                <a href="#none">
+                  <div class="menu-img"><img src="./images/mclunch-btd.png" alt=""></div>
+                  <p class="menu-name">베이컨 토마토 디럭스 세트</p>
+                  <p class="menu-price">7,400원</p>
+                </a>
+                <a href="#none" class="badge-cart">
+                  <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
+                </a>
+              </li>
+              <li class="mclunch-menu-item">
+                <a href="#none">
+                  <div class="menu-img"><img src="./images/mclunch-1955.png" alt=""></div>
+                  <p class="menu-name">1955 버거 세트</p>
+                  <p class="menu-price">7,200원</p>
+                </a>
+                <a href="#none" class="badge-cart">
+                  <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
+                </a>
+              </li>
+              <li class="mclunch-menu-item">
+                <a href="#none">
+                  <div class="menu-img"><img src="./images/mclunch-BigMac.png" alt=""></div>
+                  <p class="menu-name">빅맥 세트</p>
+                  <p class="menu-price">6,500원</p>
+                </a>
+                <a href="#none" class="badge-cart">
+                  <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
+                </a>
+              </li>
+            </ul>
           </div>
 
         </div>
-      </section>
+
+      </div>
+    </section>
+
+    <!-- 메뉴카테고리영역 -->
+    <section class="menu-category-area">
+      <div class="common-inner">
+        <ul class="category-list scroll-x">
+          <li class="category-item"><a href="#" class="category-tab is-active">추천</a></li>
+          <li class="category-item"><a href="#" class="category-tab">버거</a></li>
+          <li class="category-item"><a href="#" class="category-tab">스낵&사이드</a></li>
+          <li class="category-item"><a href="#" class="category-tab">음료</a></li>
+          <li class="category-item"><a href="#" class="category-tab">디저트</a></li>
+          <li class="category-item"><a href="#" class="category-tab">해피밀</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 메뉴리스트영역 -->
+    <section class="menu-list-area">
+      <div class="menu-list-group">
+        <div class="common-inner">
+          <div class="menu-category">
+            <p class="title">추천 메뉴</p>
+          </div>
+          <ul class="menu-list">
+            <li class="menu-item new">
+              <a href="#none" class="menu-detail">
+                <div class="menu-img-area">
+                  <img src="./images/rec-McSpicy-new.png" alt="{메뉴명}">
+                </div>
+                <div class="menu-info-area">
+                  <p class="menu-name">맥스파이시 핫앤치즈 버거</p>
+                  <p class="menu-price">7,700원 ~ </p>
+                </div>
+              </a>
+              <a href="#none" class="btn-cart">
+                <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
+                <span class="num">1</span>
+              </a>
+            </li>
+            <li class="menu-item new">
+              <a href="#none" class="menu-detail">
+                <div class="menu-img-area">
+                  <img src="./images/rec-McCrispy.png" alt="{메뉴명}">
+                </div>
+                <div class="menu-info-area">
+                  <p class="menu-name">맥크리스피 핫앤치즈 버거</p>
+                  <p class="menu-price">8,200원 ~ </p>
+                </div>
+              </a>
+              <a href="#none" class="btn-cart">
+                <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#none" class="menu-detail">
+                <div class="menu-img-area">
+                  <img src="./images/rec-btd.png" alt="{메뉴명}">
+                </div>
+                <div class="menu-info-area">
+                  <p class="menu-name">베이컨 토마토 디럭스</p>
+                  <p class="menu-price">6,600원 ~ </p>
+                </div>
+              </a>
+              <a href="#none" class="btn-cart disabled">
+                품절
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="menu-list-group">
+        <div class="common-inner">
+          <div class="menu-category">
+            <p class="title">버거</p>
+            <button class="btn-toggle"><img class="ico-arrow" src="/images/ico-arrow.svg" alt="ico-arrow"></button>
+          </div>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="#none" class="menu-detail">
+                <div class="menu-img-area">
+                  <img src="./images/rec-qpc.png" alt="{메뉴명}">
+                </div>
+                <div class="menu-info-area">
+                  <p class="menu-name">쿼터파운더치즈 버거</p>
+                  <p class="menu-price">6,300원 ~ </p>
+                </div>
+              </a>
+              <a href="#none" class="btn-cart">
+                <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-list-group is-closed">
+        <div class="common-inner">
+          <div class="menu-category">
+            <p class="title">스낵&사이드</p>
+            <button class="btn-toggle"><img class="ico-arrow" src="/images/ico-arrow.svg" alt="ico-arrow"></button>
+          </div>
+          <ul class="menu-list">
+            <li class="menu-item">준비중입니다</li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-list-group is-closed">
+        <div class="common-inner">
+          <div class="menu-category">
+            <p class="title">음료</p>
+            <button class="btn-toggle"><img class="ico-arrow" src="/images/ico-arrow.svg" alt="ico-arrow"></button>
+          </div>
+          <ul class="menu-list">
+            <li class="menu-item">준비중입니다</li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-list-group is-closed">
+        <div class="common-inner">
+          <div class="menu-category">
+            <p class="title">디저트</p>
+            <button class="btn-toggle"><img class="ico-arrow" src="/images/ico-arrow.svg" alt="ico-arrow"></button>
+          </div>
+          <ul class="menu-list">
+            <li class="menu-item">준비중입니다</li>
+          </ul>
+        </div>
+      </div>
+      <div class="menu-list-group is-closed">
+        <div class="common-inner">
+          <div class="menu-category">
+            <p class="title">해피밀</p>
+            <button class="btn-toggle"><img class="ico-arrow" src="/images/ico-arrow.svg" alt="ico-arrow"></button>
+          </div>
+          <ul class="menu-list">
+            <li class="menu-item">준비중입니다</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
+    </section>
+
+    <!-- 담은메뉴영역 -->
+    <section class="order-box-area">
+      <div class="common-inner">
+        <div>
+          <p class="order-txt">주문금액</p>
+          <p class="order-price">7,700원</p>
+        </div>
+        <a href="#none" class="btn-order">
+          <span class="txt">주문하기</span>
+          <span class="icon">
+            <img src="./images/ico-cart-fill.svg" alt="주문하기" class="ico-cart">
+            <span class="num">1</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- 주문방법선택모달 -->
+  <div class="dimmded-layer hidden"></div>
+  <div class="order-type-popup hidden">
+    <p class="title">주문 방법을 선택하세요</p>
+    <div class="type-list">
+      <a href="#none" class="type-item">
+        <img src="./images/ico-togo.png" alt="togo">
+        <p class="btn-selection">포장</p>
+      </a>
+      <a href="#none" class="type-item">
+        <img src="./images/ico-delivery.png" alt="delivery">
+        <p class="btn-selection">배달</p>
+      </a>
 
     </div>
+  </div>
 </body>
+
 </html>
