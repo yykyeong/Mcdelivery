@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/custom.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- 고정헤더영역 -->
+  <header class="header-area">
+    <div class="header-title">
+      <a href="#none" class="link-back">
+        <img src="./images/ico-back.svg" alt="뒤로가기">
+      </a>
+      <img src="./images/logo_mcdelivery.jpg" alt="로고">
+      <a href="#none" class="my-orders">
+        <img src="./images/ico-cart.svg" alt="주문내역으로 가기">
+      </a>
+    </div>
+    <ul class="header-tablist">
+      <li><a href="#none" class="tab">홈</a></li>
+      <li class="is-active"><a href="#none" class="tab">메뉴</a></li>
+      <li><a href="#none" class="tab">주문조회</a></li>
+      <li><a href="#none" class="tab">기타정보</a></li>
+    </ul>
+  </header>
+
+  <!-- 메뉴정보영역 -->
+  <section class="menu-detail-area">
+    <div class="menu-img">
+    </div>
+
+    <div class="menu-info">
+      <div class="common-inner">
+          <h1 class="menu-name">쿼터파운더치즈</h1>
+          <p class="menu-desc">
+          쿼터파운더라는 이름에서 알 수 있듯이 두 배 이상 커진 1/4파운드 &#40;113그램&#41; 비프와 부드러운 치즈 두 장의 환상궁합! 두툼한 순 쇠고기 패티와 신선한 치즈의 풍부한 맛으로 세계적으로 사랑받고 있는 맥도날드의 대표적인 프리미엄 버거
+          </p>
+      </div>
+    </div>
+  </section>
+
+<section class="menu-selection-area">
+  <div class="common-inner">
+    <ul class="menu-list">
+      <li class="menu-item">
+        <a href="#none" class="menu-detail">
+          <div class="menu-img-area">
+            <img src="./images/mclunch-QuarterPounder.png" alt="{메뉴명}">
+          </div>
+          <div class="menu-info-area">
+            <p class="menu-name">라지세트</p>
+            <p class="menu-desc">쿼터파운더치즈+프렌치 프라이L+콜라L</p>
+            <p class="menu-price">7,700원 ~ </p>
+          </div>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#none" class="menu-detail">
+          <div class="menu-img-area">
+            <img src="./images/mclunch-QuarterPounder.png" alt="{메뉴명}">
+          </div>
+          <div class="menu-info-area">
+            <p class="menu-name">세트</p>
+            <p class="menu-desc">쿼터파운더치즈+프렌치 프라이R+콜라R</p>
+            <p class="menu-price">8,700원 ~ </p>
+          </div>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#none" class="menu-detail">
+          <div class="menu-img-area">
+            <img src="./images/mclunch-QuarterPounder.png" alt="{메뉴명}">
+          </div>
+          <div class="menu-info-area">
+            <p class="menu-name">단품</p>
+            <p class="menu-desc">쿼터파운더치즈</p>
+            <p class="menu-price">6,300원</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+</div>
+
+<!-- 옵션팝업 -->
+
+<div class="dimmded-layer light hidden"></div>
+<div class="option-popup-area hidden">
+  <div class="side-popup ">
+    <div class="common-inner">
+      <h1 class="option-title">사이드변경</h1>
+      <ul class="option-list">
+        <li class="menu-item">
+          <input type="radio" id="side01" class="input-radio" name="side" checked>
+          <label for="side01" class="label">
+            <div class="menu-detail">
+              <div class="menu-img-area">
+                <img src="./images/side_frenchfries.png" alt="{메뉴명}">
+              </div>
+              <div class="menu-info-area">
+                <p class="menu-name">프렌치프라이 M</p>
+                <p class="menu-price">+0원 </p>
+              </div>
+            </div>
+            <div class="label-icon"></div>
+          </label>
+        </li>
+        <li class="menu-item">
+          <input type="radio" id="side02" class="input-radio" name="side">
+          <label for="side02" class="label">
+            <div class="menu-detail">
+              <div class="menu-img-area">
+                <img src="./images/side_coleslaw.png" alt="{메뉴명}">
+              </div>
+              <div class="menu-info-area">
+                <p class="menu-name">코울슬로</p>
+                <p class="menu-price">+0원 </p>
+              </div>
+            </div>
+            <div class="label-icon"></div>
+          </label>
+        </li>
+        <li class="menu-item">
+          <input type="radio" id="side03" class="input-radio" name="side">
+          <label for="side03" class="label">
+            <div class="menu-detail">
+              <div class="menu-img-area">
+                <img src="./images/side_frencheese.png" alt="{메뉴명}">
+              </div>
+              <div class="menu-info-area">
+                <p class="menu-name">프렌치프라이 M<br>+ 치즈스틱 2조각</p>
+                <p class="menu-price">+3,300원 </p>
+              </div>
+            </div>
+            <div class="label-icon"></div>
+          </label>
+        </li>
+      </ul>
+
+      <button class="btn-selection">선택</button>
+
+      <button class="btn-close">
+        <img src="./images/ico-close.svg" alt="close" class="ico-close">
+      </button>
+
+    </div>
+  </div>
+
+  <div class="beverage-popup">
+    <div class="common-inner">
+      <h1 class="option-title">사이드변경</h1>
+      
+      <ul class="option-list scroll-y">
+        <li class="option-item">
+          <input type="radio" id="bev01" class="input-radio" name="beveage" checked>
+          <label for="bev01" class="label">
+            <img src="./images/beverage_coke.png" alt="{메뉴명}">
+            <p class="menu-name">코카콜라 M</p>
+            <p class="menu-price">+0원 </p>
+          </label>
+        </li>
+        <li class="option-item">
+          <input type="radio" id="bev02" class="input-radio" name="beveage">
+          <label for="bev02" class="label">
+            <img src="./images/beverage_sprite.png" alt="{메뉴명}">
+            <p class="menu-name">스프라이트 M</p>
+            <p class="menu-price">+0원</p>
+          </label>
+        </li>
+        <li class="option-item">
+          <input type="radio" id="bev03" class="input-radio" name="beveage">
+          <label for="bev03" class="label">
+            <img src="./images/beverage_fanta.png" alt="{메뉴명}">
+            <p class="menu-name">환타 M</p>
+            <p class="menu-price">+0원</p>
+          </label>
+        </li>
+        <li class="option-item">
+          <input type="radio" id="bev04" class="input-radio" name="beveage">
+          <label for="bev04" class="label">
+            <img src="./images/beverage_peach.png" alt="{메뉴명}">
+            <p class="menu-name">자두 복숭아 칠러</p>
+            <p class="menu-price">+1,300원 </p>
+          </label>
+        </li>
+        <li class="option-item">
+          <input type="radio" id="bev05" class="input-radio" name="beveage">
+          <label for="bev05" class="label">
+            <img src="./images/beverage_hallabong.png" alt="{메뉴명}">
+            <p class="menu-name">한라봉 칠러</p>
+            <p class="menu-price">+1,300원 </p>
+          </label>
+        </li>
+        <li class="option-item">
+          <input type="radio" id="bev06" class="input-radio" name="beveage">
+          <label for="bev06" class="label">
+            <img src="./images/beverage_vanilla.png" alt="{메뉴명}">
+            <p class="menu-name">바닐라 쉐이크</p>
+            <p class="menu-price">+1,100원</p>
+          </label>
+        </li>
+        <li class="option-item">
+          <input type="radio" id="bev07" class="input-radio" name="beveage">
+          <label for="bev07" class="label">
+            <img src="./images/beverage_americano.png" alt="{메뉴명}">
+            <p class="menu-name">아메리카노</p>
+            <p class="menu-price">+900원</p>
+          </label>
+        </li>
+        <li class="option-item">
+          <input type="radio" id="bev08" class="input-radio" name="beveage">
+          <label for="bev08" class="label">
+            <img src="./images/beverage_orange.png" alt="{메뉴명}">
+            <p class="menu-name">오렌지 주스&#40;캔&#41;</p>
+            <p class="menu-price">+400원</p>
+          </label>
+        </li>
+        <li class="option-item">
+          <input type="radio" id="bev09" class="input-radio" name="beveage">
+          <label for="bev09" class="label">
+            <img src="./images/beverage_water.png" alt="{메뉴명}">
+            <p class="menu-name">생수</p>
+            <p class="menu-price">+0원</p>
+          </label>
+        </li>
+
+      </ul>
+
+      <button class="btn-selection">선택</button>
+
+      <button class="btn-close">
+        <img src="./images/ico-close.svg" alt="close" class="ico-close">
+      </button>
+
+    </div>
+  </div>
+
+
+</div>
+</body>
+
+</html>

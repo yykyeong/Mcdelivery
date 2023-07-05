@@ -50,6 +50,11 @@ button:disabled {
   display: none;
 }
 
+input,
+button {
+  appearance: none;
+}
+
 .header-area {
   background-color: white;
   position: fixed;
@@ -225,24 +230,149 @@ button:disabled {
   margin-top: 32px;
 }
 .order-type-popup .type-item {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
 }
 .order-type-popup .type-item + .type-item {
   border-left: 1px solid #e5e5e5;
 }
 .order-type-popup .btn-selection {
   border: 1px solid;
-  margin-top: 15px;
   padding: 6px 18px;
   font-size: 16px;
   font-weight: 700;
   border-radius: 28px;
   color: #fff;
   background-color: #292929;
+  width: 68px;
+  white-space: nowrap;
+  margin: 18px auto 0;
+}
+
+.option-popup-area {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 18px * 2 );
+  max-width: 720px;
+  z-index: 1000;
+  background-color: #fff;
+}
+.option-popup-area > div {
+  padding: 10px 18px;
+}
+.option-popup-area .option-title {
+  padding: 18px 18px;
+  font-size: 20px;
+  font-weight: 800;
+}
+.option-popup-area .option-list {
+  margin: 20px 0;
+  height: 280px;
+}
+.option-popup-area .btn-selection {
+  width: 100%;
+  line-height: 52px;
+  border-radius: 3px;
+  font-weight: 700;
+  background-color: #D90007;
+  color: #fff;
+  margin: 10px 0;
+}
+.option-popup-area .btn-close {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  width: 48px;
+  height: 48px;
+}
+.option-popup-area .btn-close .ico-close {
+  width: 20px;
+}
+
+.side-popup .menu-item {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.side-popup .menu-item:last-child {
+  margin-bottom: 0;
+}
+.side-popup .menu-item .menu-img-area {
+  background-color: transparent;
+}
+.side-popup .menu-item .label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.side-popup .menu-item .label .menu-name, .side-popup .menu-item .label .menu-price {
+  font-size: 17px;
+  font-weight: 500;
+  color: #444;
+}
+.side-popup .menu-item .label .label-icon {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #e5e5e5;
+  border-radius: 100%;
+  background-color: #fff;
+}
+.side-popup .menu-item .input-radio:checked + .label .label-icon {
+  border: 8px solid #D90007;
+}
+.side-popup .menu-item .input-radio:checked + .label .menu-name, .side-popup .menu-item .input-radio:checked + .label .menu-price {
+  font-weight: 700;
+}
+.side-popup .menu-item .input-radio:checked + .label .menu-name {
+  color: #292929;
+}
+.side-popup .menu-item .input-radio:checked + .label .menu-price {
+  color: #4B8612;
+}
+
+.beverage-popup .option-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.beverage-popup .option-item {
+  width: 31%;
+  display: flex;
+  margin-bottom: 8px;
+}
+.beverage-popup .label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.beverage-popup .label img {
+  width: 100%;
+  background-color: #fff;
+}
+.beverage-popup .label .menu-name {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  word-break: break-all;
+  font-size: 15px;
+  font-weight: 600;
+}
+.beverage-popup .input-radio:checked + .label .menu-name {
+  position: relative;
+}
+.beverage-popup .input-radio:checked + .label .menu-name::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: url(/images/ico-check-white.svg) no-repeat center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: 35px;
+  transform: translateX(-50%);
 }
 
 .container {
@@ -266,6 +396,17 @@ button:disabled {
   scrollbar-width: none;
 }
 .scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-y {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scroll-y::-webkit-scrollbar {
   display: none;
 }
 
@@ -550,4 +691,58 @@ button:disabled {
   font-weight: 700;
   text-align: center;
   color: #D90007;
+}
+
+.menu-detail-area .menu-img {
+  position: relative;
+  height: 250px;
+  background: url(/images/QuarterPounder-set-bg.jpg) no-repeat center;
+  background-size: cover;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+.menu-detail-area .menu-img::before, .menu-detail-area .menu-img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  opacity: 0.2;
+}
+.menu-detail-area .menu-img::before {
+  top: 0;
+  height: 120px;
+  background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0));
+}
+.menu-detail-area .menu-img::after {
+  bottom: 0;
+  height: 45px;
+  background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+}
+.menu-detail-area .menu-info {
+  margin-top: -15px;
+  padding: 0 18px 20px;
+}
+.menu-detail-area .menu-info .common-inner {
+  position: relative;
+  padding: 20px;
+  height: 180px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.04);
+}
+.menu-detail-area .menu-info .menu-desc {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.menu-selection-area .menu-item {
+  background-color: #fff;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.menu-selection-area .menu-img-area {
+  background-color: transparent;
+}
+.menu-selection-area .menu-desc {
+  margin-top: -7px;
+  font-size: 14px;
 }

@@ -1,0 +1,75 @@
+.menu-detail-area {
+
+  // 메뉴이미지영역
+  .menu-img {
+    position: relative;
+    height: 250px;
+    background: url(/images/QuarterPounder-set-bg.jpg) no-repeat center;
+    background-size: cover;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      opacity: 0.2;
+    }
+
+    &::before {
+      top: 0;
+      height: 120px;
+      background-image: linear-gradient(to bottom, #000, rgba(0,0,0,0));
+    }
+
+    &::after {
+      bottom: 0;
+      height: 45px;
+      background-image: linear-gradient(to top, #000, rgba(0,0,0,0));
+    }
+  }
+
+  // 메뉴정보영역
+  .menu-info {
+    margin-top: -15px;
+    padding: 0 $m-padding 20px;
+
+    .common-inner {
+      position: relative;
+      padding: 20px;
+      height: 180px;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 0 4px 3px rgba(0,0,0,0.04);
+
+    }
+
+
+    .menu-desc {
+      margin-top: 20px;
+      font-size: 15px;
+      line-height: 1.2;
+
+    }
+
+  }
+}
+
+.menu-selection-area {
+
+  .menu-list {}
+
+  .menu-item {
+    background-color: $white;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.06)
+  }
+
+  .menu-img-area {
+    background-color: transparent;
+  }
+
+  .menu-desc {
+    margin-top: -7px;
+    font-size: 14px;
+  }
+}
