@@ -1,4 +1,4 @@
-.dimmded-layer {
+.dimmed-layer {
   position: fixed;
   top: 0;
   left: 0;
@@ -61,18 +61,26 @@
 }
 
 // 옵션팝업
-.option-popup-area {
+.modal-wrapper {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: calc(100% - #{$m-padding} * 2 );
-  max-width: 720px;
-  z-index: 1000;
-  background-color: $white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
 
-  > div {
-    padding: 10px $m-padding;
+  .modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: calc(100% - #{$m-padding} * 2 );
+    max-width: 720px;
+    z-index: 1000;
+    background-color: $white;
+
+    > div {
+      padding: 10px $m-padding;
+    }
   }
 
   .option-title {
@@ -80,7 +88,6 @@
     font-size: 20px;
     font-weight: 800;
   }
-
 
   .option-list {
     margin: 20px 0;
@@ -182,9 +189,11 @@
     flex-direction: column;
     align-items: center;
 
-    img {
-      width: 100%;
-      background-color: $white;
+    .bev-img {
+      display: flex;
+      img {
+        width: 100%;
+      }
     }
 
     .menu-name {
@@ -199,12 +208,12 @@
   }
 
   .input-radio {
-    &:checked + .label .menu-name {
+    &:checked + .label .bev-img {
       position: relative;
       &::after {
         content: '';
         position: absolute;
-        bottom: 100%;
+        top: 50%;
         left: 50%;
         width: 50px;
         height: 50px;
@@ -212,7 +221,7 @@
         background: url(/images/ico-check-white.svg) no-repeat center;
         background-color: rgba(#000,0.5);
         background-size: 35px;
-        transform: translateX(-50%);
+        transform: translate(-50%,-50%);
 
       }
 

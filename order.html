@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주문서</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/custom.js"></script>
+</head>
+
+
+<body>
+
+  <div class="container orderlist">
+
+    <section class="order-form-area">
+
+      <!-- 주문서타이틀 -->
+      <div class="page-title-area">
+        <a href="javascript:history.back()" class="link-back"><img src="./images/ico-back.svg" alt="link-back"></a>
+        <p class="title">주문서</p>
+      </div>
+
+
+      <!-- 주문서메뉴 -->
+      <div class="order-content">
+        <div class="common-inner">
+          <div class="order-content-top">
+            <img src="./images/ico-love.png" alt="lovein">
+          </div>
+
+          <div class="order-content-body">
+
+            <div class="no-order hidden">
+              <img src="./images/logo_m.png" alt="no-order">
+              <p class="txt">담은 메뉴가 없습니다.</p>
+            </div>
+
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-detail">
+                  <div class="menu-img-area">
+                    <img src="./images/mclunch-QuarterPounder.png" alt="{메뉴명}">
+                  </div>
+                  <div class="menu-info-area">
+                    <p class="menu-name">쿼터파운더치즈 세트</p>
+                    <p class="menu-price">9,600원</p>
+                  </div>
+                </div>
+
+                <div class="menu-option-group side">
+                  <div class="option-item">
+                    <p class="title">사이드</p>
+                    <p class="option-name">프렌치 프라이</p>
+                    <p class="extra-price">0</p>
+                    <button class="btn-option">변경</button>
+                  </div>
+
+                  <div class="option-item beverage">
+                    <p class="title">음료</p>
+                    <p class="option-name">바닐라 쉐이크</p>
+                    <p class="extra-price">+1,100</p>
+                    <button class="btn-option">변경</button>
+                  </div>
+                </div>
+
+                <div class="menu-amount">
+                  <span>수량</span>
+                  <div class="amount-select">
+                    <button class="btn-minus " disabled></button>
+                    <span class="amount">1</span>
+                    <button class="btn-plus enabled"></button>
+                  </div>
+                </div>
+
+                <div class="total-price">
+                  <span>합계금액</span>
+                  <span class="price">9,600</span>
+                </div>
+
+                <button class="btn-delete">
+                  <img src="./images/ico-close.svg" alt="delete" class="ico-delete">
+                </button>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-detail">
+                  <div class="menu-img-area">
+                    <img src="./images/mclunch-QuarterPounder.png" alt="{메뉴명}">
+                  </div>
+                  <div class="menu-info-area">
+                    <p class="menu-name">쿼터파운더치즈 세트</p>
+                    <p class="menu-price">9,600원</p>
+                  </div>
+                </div>
+
+                <div class="menu-option-group">
+                  <div class="option-item side">
+                    <p class="title">사이드</p>
+                    <p class="option-name">프렌치 프라이</p>
+                    <p class="extra-price">0</p>
+                    <button class="btn-option">변경</button>
+                  </div>
+
+                  <div class="option-item beverage">
+                    <p class="title">음료</p>
+                    <p class="option-name">바닐라 쉐이크</p>
+                    <p class="extra-price">+1,100</p>
+                    <button class="btn-option">변경</button>
+                  </div>
+                </div>
+
+                <div class="menu-amount">
+                  <span>수량</span>
+                  <div class="amount-select">
+                    <button class="btn-minus"></button>
+                    <span class="amount">1</span>
+                    <button class="btn-plus enabled"></button>
+                  </div>
+                </div>
+
+                <div class="total-price">
+                  <span>합계금액</span>
+                  <span class="price">9,600</span>
+                </div>
+
+                <button class="btn-delete">
+                  <img src="./images/ico-close.svg" alt="delete" class="ico-delete">
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="btn-menu-add"><i class="ico-add"></i>메뉴추가</button>
+
+      </div>
+
+      <!-- 결제금액상세 -->
+      <div class="payment-details">
+        <div class="common-inner">
+          <h2 class="payment-title">결제 상세</h2>
+          <div class="origin-price">
+            <p>주문 금액</p>
+            <span>9,600원</span>
+          </div>          
+          <div class="discount-price">
+            <p>포장 할인</p>
+            <span>-1,000원</span>
+          </div>
+          <div class="current-price">
+            <p>총 결제 금액</p>
+            <span>7,600원</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="order-box-area">
+      <div class="common-inner">
+        <div>
+          <p class="order-txt">주문금액</p>
+          <p class="order-price">7,700원</p>
+        </div>
+        <a href="#none" class="btn-order">
+          <span class="txt">주문하기</span>
+          <span class="icon">
+            <img src="./images/ico-cart-fill.svg" alt="주문하기" class="ico-cart">
+            <span class="num">1</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 맨위로 -->
+    <div class="go-to-top">
+      <a href="#" class="link">Top<i class="ico-up"></i></a>
+    </div>
+
+  </div>
+
+
+
+<script>
+const btnPlus = document.querySelector('.btn-plus');
+const btnMinus = document.querySelector('.btn-minus');
+const amountElement = document.querySelector('.amount');
+
+btnPlus.addEventListener('click', () => {
+  let currentAmount = parseInt(amountElement.textContent);
+  currentAmount += 1;
+  amountElement.textContent = currentAmount.toString();
+
+  if (currentAmount > 1) {
+    btnMinus.classList.add('enabled');
+    btnMinus.removeAttribute('disabled');
+  }
+});
+
+btnMinus.addEventListener('click', () => {
+  let currentAmount = parseInt(amountElement.textContent);
+  if (currentAmount > 1) {
+    currentAmount -= 1;
+    amountElement.textContent = currentAmount.toString();
+  }
+
+  if (currentAmount === 1) {
+    btnMinus.classList.remove('enabled');
+    btnMinus.setAttribute('disabled', 'true');
+  }
+});
+
+</script>
+</body>
+
+
+
+</html>

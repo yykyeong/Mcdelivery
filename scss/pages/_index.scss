@@ -249,6 +249,13 @@
         display: none;
       }
     }
+    .comming-soon {
+      margin: 0 auto;
+      text-align: center;
+      img {
+        opacity: .5;
+      }
+    }
   }
   .menu-category {
     display: flex;

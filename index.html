@@ -15,11 +15,11 @@
     <!-- 고정헤더영역 -->
     <header class="header-area">
       <div class="header-title">
-        <a href="#none" class="link-back">
+        <a href="javascript:history.back()" class="link-back">
           <img src="./images/ico-back.svg" alt="뒤로가기">
         </a>
         <img src="./images/logo_mcdelivery.jpg" alt="로고">
-        <a href="#none" class="my-orders">
+        <a href="./order.html" class="my-orders">
           <img src="./images/ico-cart.svg" alt="주문내역으로 가기">
         </a>
       </div>
@@ -72,7 +72,7 @@
               <img src="./images/ico-clock.svg" alt="ico-clock" class="ico-clock">맥런치
             </div>
             <ul class="mclunch-menu-list scroll-x">
-              <li class="mclunch-menu-item">
+              <li class="mclunch-menu-item" onclick="location.href='./detail.html'">
                 <a href="#none">
                   <div class="menu-img"><img src="./images/mclunch-QuarterPounder.png" alt=""></div>
                   <p class="menu-name">쿼터파운더치즈</p>
@@ -82,7 +82,7 @@
                   <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
                 </a>
               </li>
-              <li class="mclunch-menu-item">
+              <li class="mclunch-menu-item" onclick="location.href='./detail.html'">
                 <a href="#none">
                   <div class="menu-img"><img src="./images/mclunch-Shanghai.png" alt=""></div>
                   <p class="menu-name">맥스파이시 상하이 버거 세트</p>
@@ -92,7 +92,7 @@
                   <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
                 </a>
               </li>
-              <li class="mclunch-menu-item">
+              <li class="mclunch-menu-item" onclick="location.href='./detail.html'">
                 <a href="#none">
                   <div class="menu-img"><img src="./images/mclunch-btd.png" alt=""></div>
                   <p class="menu-name">베이컨 토마토 디럭스 세트</p>
@@ -102,7 +102,7 @@
                   <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
                 </a>
               </li>
-              <li class="mclunch-menu-item">
+              <li class="mclunch-menu-item" onclick="location.href='./detail.html'">
                 <a href="#none">
                   <div class="menu-img"><img src="./images/mclunch-1955.png" alt=""></div>
                   <p class="menu-name">1955 버거 세트</p>
@@ -112,7 +112,7 @@
                   <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
                 </a>
               </li>
-              <li class="mclunch-menu-item">
+              <li class="mclunch-menu-item" onclick="location.href='./detail.html'">
                 <a href="#none">
                   <div class="menu-img"><img src="./images/mclunch-BigMac.png" alt=""></div>
                   <p class="menu-name">빅맥 세트</p>
@@ -134,25 +134,25 @@
     <section class="menu-category-area">
       <div class="common-inner">
         <ul class="category-list scroll-x">
-          <li class="category-item"><a href="#" class="category-tab is-active">추천</a></li>
-          <li class="category-item"><a href="#" class="category-tab">버거</a></li>
-          <li class="category-item"><a href="#" class="category-tab">스낵&사이드</a></li>
-          <li class="category-item"><a href="#" class="category-tab">음료</a></li>
-          <li class="category-item"><a href="#" class="category-tab">디저트</a></li>
-          <li class="category-item"><a href="#" class="category-tab">해피밀</a></li>
+          <li class="category-item"><a href="#rec" class="category-tab is-active">추천</a></li>
+          <li class="category-item"><a href="#burger" class="category-tab">버거</a></li>
+          <li class="category-item"><a href="#snack" class="category-tab">스낵&사이드</a></li>
+          <li class="category-item"><a href="#bev" class="category-tab">음료</a></li>
+          <li class="category-item"><a href="#desert" class="category-tab">디저트</a></li>
+          <li class="category-item"><a href="#happymeal" class="category-tab">해피밀</a></li>
         </ul>
       </div>
     </section>
 
     <!-- 메뉴리스트영역 -->
     <section class="menu-list-area">
-      <div class="menu-list-group">
+      <div class="menu-list-group" id="rec">
         <div class="common-inner">
           <div class="menu-category">
             <p class="title">추천 메뉴</p>
           </div>
           <ul class="menu-list">
-            <li class="menu-item new">
+            <li class="menu-item new" onclick="location.href='./detail.html'">
               <a href="#none" class="menu-detail">
                 <div class="menu-img-area">
                   <img src="./images/rec-McSpicy-new.png" alt="{메뉴명}">
@@ -167,7 +167,7 @@
                 <span class="num">1</span>
               </a>
             </li>
-            <li class="menu-item new">
+            <li class="menu-item new" onclick="location.href='./detail.html'">
               <a href="#none" class="menu-detail">
                 <div class="menu-img-area">
                   <img src="./images/rec-McCrispy.png" alt="{메뉴명}">
@@ -181,7 +181,7 @@
                 <img src="./images/ico-cart.svg" alt="주문하기" class="ico-cart">
               </a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item" onclick="location.href='./detail.html'">
               <a href="#none" class="menu-detail">
                 <div class="menu-img-area">
                   <img src="./images/rec-btd.png" alt="{메뉴명}">
@@ -195,18 +195,17 @@
                 품절
               </a>
             </li>
-
           </ul>
         </div>
       </div>
-      <div class="menu-list-group">
+      <div class="menu-list-group" id="burger">
         <div class="common-inner">
           <div class="menu-category">
             <p class="title">버거</p>
             <button class="btn-toggle"><img class="ico-arrow" src="/images/ico-arrow.svg" alt="ico-arrow"></button>
           </div>
           <ul class="menu-list">
-            <li class="menu-item">
+            <li class="menu-item" onclick="location.href='./detail.html'">
               <a href="#none" class="menu-detail">
                 <div class="menu-img-area">
                   <img src="./images/rec-qpc.png" alt="{메뉴명}">
@@ -223,47 +222,67 @@
           </ul>
         </div>
       </div>
-      <div class="menu-list-group is-closed">
+      <div class="menu-list-group" id="snack">
         <div class="common-inner">
           <div class="menu-category">
             <p class="title">스낵&사이드</p>
             <button class="btn-toggle"><img class="ico-arrow" src="/images/ico-arrow.svg" alt="ico-arrow"></button>
           </div>
           <ul class="menu-list">
-            <li class="menu-item">준비중입니다</li>
+            <li class="menu-item">
+              <div class="comming-soon">
+                <img src="./images/menu-snack.jpg" alt="snack">
+                <p>준비중입니다</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="menu-list-group is-closed">
+      <div class="menu-list-group is-closed" id="bev">
         <div class="common-inner">
           <div class="menu-category">
             <p class="title">음료</p>
             <button class="btn-toggle"><img class="ico-arrow" src="/images/ico-arrow.svg" alt="ico-arrow"></button>
           </div>
           <ul class="menu-list">
-            <li class="menu-item">준비중입니다</li>
+            <li class="menu-item">
+              <div class="comming-soon">
+                <img src="./images/menu-bev.jpg" alt="bev">
+                <p>준비중입니다</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="menu-list-group is-closed">
+      <div class="menu-list-group is-closed" id="desert">
         <div class="common-inner">
           <div class="menu-category">
             <p class="title">디저트</p>
             <button class="btn-toggle"><img class="ico-arrow" src="/images/ico-arrow.svg" alt="ico-arrow"></button>
           </div>
           <ul class="menu-list">
-            <li class="menu-item">준비중입니다</li>
+            <li class="menu-item">
+              <div class="comming-soon">
+                <img src="./images/menu-dessert.jpg" alt="desert">
+                <p>준비중입니다</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="menu-list-group is-closed">
+      <div class="menu-list-group is-closed" id="happymeal">
         <div class="common-inner">
           <div class="menu-category">
             <p class="title">해피밀</p>
             <button class="btn-toggle"><img class="ico-arrow" src="/images/ico-arrow.svg" alt="ico-arrow"></button>
           </div>
           <ul class="menu-list">
-            <li class="menu-item">준비중입니다</li>
+            <li class="menu-item">
+              <div class="comming-soon">
+                <img src="./images/menu-happy.jpg" alt="happy">
+                <p>준비중입니다</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -281,7 +300,7 @@
           <p class="order-txt">주문금액</p>
           <p class="order-price">7,700원</p>
         </div>
-        <a href="#none" class="btn-order">
+        <a href="./order.html" class="btn-order">
           <span class="txt">주문하기</span>
           <span class="icon">
             <img src="./images/ico-cart-fill.svg" alt="주문하기" class="ico-cart">
@@ -291,24 +310,47 @@
       </div>
     </section>
 
+
+    <!-- 맨위로 -->
+    <div class="go-to-top">
+      <a href="#" class="link">Top<i class="ico-up"></i></a>
+    </div>
+
   </div>
 
   <!-- 주문방법선택모달 -->
-  <div class="dimmded-layer hidden"></div>
+  <div class="dimmed-layer hidden"></div>
   <div class="order-type-popup hidden">
     <p class="title">주문 방법을 선택하세요</p>
     <div class="type-list">
-      <a href="#none" class="type-item">
+      <a href="#none" class="type-item" onClick="popupClose()">
         <img src="./images/ico-togo.png" alt="togo">
         <p class="btn-selection">포장</p>
       </a>
-      <a href="#none" class="type-item">
+      <a href="#none" class="type-item" onClick="popupClose()">
         <img src="./images/ico-delivery.png" alt="delivery">
         <p class="btn-selection">배달</p>
       </a>
-
     </div>
   </div>
+
+  <script>
+    window.onload = () => {
+      popupOpen();
+    };
+    const dimmedLayer = document.querySelector('.dimmed-layer');
+    const orderTypePopup = document.querySelector('.order-type-popup');
+
+    const popupOpen = () => {
+      dimmedLayer.classList.remove('hidden');
+      orderTypePopup.classList.remove('hidden');
+    };
+
+    const popupClose = () => {
+      dimmedLayer.classList.add('hidden');
+      orderTypePopup.classList.add('hidden');
+    };
+  </script>
 </body>
 
 </html>
