@@ -186,12 +186,12 @@
 <script>
 const btnPlus = document.querySelector('.btn-plus');
 const btnMinus = document.querySelector('.btn-minus');
-const amountElement = document.querySelector('.amount');
+const amountEl = document.querySelector('.amount');
 
 btnPlus.addEventListener('click', () => {
-  let currentAmount = parseInt(amountElement.textContent);
+  let currentAmount = parseInt(amountEl.textContent);
   currentAmount += 1;
-  amountElement.textContent = currentAmount.toString();
+  amountEl.textContent = currentAmount.toString();
 
   if (currentAmount > 1) {
     btnMinus.classList.add('enabled');
@@ -200,10 +200,10 @@ btnPlus.addEventListener('click', () => {
 });
 
 btnMinus.addEventListener('click', () => {
-  let currentAmount = parseInt(amountElement.textContent);
+  let currentAmount = parseInt(amountEl.textContent);
   if (currentAmount > 1) {
     currentAmount -= 1;
-    amountElement.textContent = currentAmount.toString();
+    amountEl.textContent = currentAmount.toString();
   }
 
   if (currentAmount === 1) {
