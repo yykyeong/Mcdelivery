@@ -69,6 +69,9 @@ button {
   align-items: center;
   height: 48px;
 }
+.header-area .header-title > img {
+  cursor: pointer;
+}
 .header-area .header-title .link-back {
   display: flex;
 }
@@ -421,6 +424,12 @@ button {
 }
 .scroll-y::-webkit-scrollbar {
   display: none;
+}
+
+.scroll-off {
+  overflow: hidden;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 
 .go-to-top {

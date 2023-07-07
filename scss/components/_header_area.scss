@@ -12,6 +12,10 @@
     align-items: center;
     height: $header-title-height;
 
+    >img {
+      cursor: pointer;
+    }
+
     .link-back {
       display: flex;
     }

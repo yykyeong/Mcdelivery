@@ -38,6 +38,12 @@
     }
 }
 
+.scroll-off {
+  overflow: hidden;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
 .go-to-top {
   padding: 16px 0 32px;
   background-color: $white;

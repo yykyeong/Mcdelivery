@@ -18,7 +18,7 @@
       <a href="javascript:history.back()" class="link-back">
         <img src="./images/ico-back.svg" alt="뒤로가기">
       </a>
-      <img src="./images/logo_mcdelivery.jpg" alt="로고">
+      <img src="./images/logo_mcdelivery.jpg" alt="로고" onclick="location.href='/index.html'">
       <a href="#none" class="my-orders">
         <img src="./images/ico-cart.svg" alt="주문내역으로 가기">
       </a>
@@ -311,6 +311,7 @@ const hideModals = () => {
 
 menuSelectionEl.addEventListener('click', () => {
   sidePopupEl.classList.remove('hidden');
+  document.body.classList.add("scroll-off");
 })
 
 document.querySelector('.side .btn-selection').addEventListener('click', () => {
@@ -325,6 +326,7 @@ document.querySelector('.beverage .btn-selection').addEventListener('click', () 
 modalClosebtn.forEach((closeBtn) => {
   closeBtn.addEventListener('click', () => {
     hideModals();
+    document.body.classList.remove("scroll-off");
   })
 })
 </script>
